@@ -190,6 +190,9 @@ if (
     //redirect on error
     $responseURL = "Location: " . URL . "msme_form.php";
     if ($errors) {
+        //put value in session variable
+        $_SESSION['emailValue'] = $_POST['email'];
+
         Tag::setResponse(
             'Invalid Data Input',
             $errors,

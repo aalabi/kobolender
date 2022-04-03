@@ -38,6 +38,12 @@ if ($theResponse = Tag::getResponse()) {
         $responseMessage,
         $theResponse['status']
     );
+
+    //check for errors messages
+    if ($theResponse['status'] == Tag::RESPONSE_NEGATIVE) {
+        $emailValue = $_SESSION['emailValue'];
+        unset($_SESSION['emailValue']);
+    }
 }
 ?>
 
