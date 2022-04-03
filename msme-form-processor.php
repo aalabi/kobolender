@@ -375,6 +375,7 @@ if (
     Tag::setResponse($responseTitle, [$responseMessage], $responseColor);
 
     //redirect on completion
+    $responseURL = "Location: " . URL . "form-success.php";
     header($responseURL);
     exit();
 } else {
