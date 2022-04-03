@@ -66,6 +66,24 @@ $(document).ready(function () {
                     <input required type="file" id="myFile" name="letter_of_guarantor_col[]" class="form-control al-regular-input">
                 </div>
             </div>
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">
+                    ID Card *
+                    <small>(png, jpg, doc, pdf max 1mb)</small>
+                </label>
+                <div class="col-md-8">
+                    <input required type="file" required id="myFile" name="promoterIdCard[]" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">
+                    Passport Picture *
+                    <small>(png, jpg, doc, pdf max 1mb)</small>
+                </label>
+                <div class="col-md-8">
+                    <input required type="file" id="myFile" name="promoterPassport[]" class="form-control al-regular-input">
+                </div>
+            </div>
         </div>
     `;
     $("#promoterContainer").append(promoterRow);

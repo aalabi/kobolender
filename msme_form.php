@@ -372,6 +372,24 @@ if ($theResponse = Tag::getResponse()) {
                                         <input required type="file" id="myFile" name="letter_of_guarantor" class="form-control al-regular-input">
                                     </div>
                                 </div>
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label">
+                                        ID Card *
+                                        <small>(png, jpg, doc, pdf max 1mb)</small>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input required type="file" required id="myFile" name="promoterIdCard" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label">
+                                        Passport Picture *
+                                        <small>(png, jpg, doc, pdf max 1mb)</small>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input required type="file" id="myFile" name="promoterPassport" class="form-control al-regular-input">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -438,7 +456,7 @@ require_once('template/footer.php');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
-<script src="<?= URLBACKEND ?>asset/js/al-custom.js"></script>
+<script src="<?= URLBACKEND ?>asset/js/al-custom.js?version=" .time()></script>
 
 </body>
 
