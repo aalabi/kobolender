@@ -1,0 +1,705 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*TOP NAV */
+#topbar {
+  background-color: #116530;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  height: 40px;
+  padding: 0;
+  color: #fff;
+}
+#topbar .contact-info a {
+  line-height: 0;
+  color: #fff;
+  transition: 0.3s;
+}
+#topbar .contact-info a:hover {
+  color: grey;
+}
+#topbar .contact-info i {
+  color: #fff;
+  line-height: 0;
+  margin-right: 5px;
+}
+#topbar .contact-info .phone-icon {
+  margin-left: 15px;
+}
+#topbar .social-links a {
+  color: #fff;
+  padding: 4px 12px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+}
+#topbar .social-links a:hover {
+  color: grey;
+}
+
+/* CSS for Navbar */
+
+.bg-light {
+  background: #fff !important;
+  border-bottom: 0.2px solid #fff;
+}
+
+.my-image {
+  width: 250px;
+  height: 80px;
+}
+.navbar .nav-item {
+  padding: 0 20px;
+}
+.nav-link {
+  font-size: 1.1rem;
+  color: #000 !important;
+}
+
+.nav-link:hover {
+  color: #116530 !important;
+  font-weight: bold;
+}
+
+.nav-link .btn {
+  font-size: 1rem;
+  width: 140px;
+  height: 40px;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2868, 189, 50, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(68, 189, 50, 1);
+  border-color: rgba(68, 189, 50, 1);
+}
+
+/* CSS for Carousel */
+.carousel-item {
+  height: 85vh;
+  background: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-caption {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  bottom: 210px;
+  height: 210px;
+  font-family: "Lato", sans-serif;
+}
+.carousel-caption h5 {
+  font-size: 2rem;
+  color: #fff;
+  padding-bottom: 20px;
+  line-height: 42px;
+  font-family: "Lato", sans-serif;
+}
+.caro-btn {
+  font-family: "Lato", sans-serif;
+}
+
+/* CSS for About Us  */
+
+.card {
+  font-family: Lato;
+  display: flex;
+  justify-content: space-around;
+}
+.card:hover {
+  box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.good {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about {
+  margin-top: 60px;
+}
+.mydivider {
+  width: 75px;
+  border: 2px solid #116530;
+  margin-bottom: 40px;
+}
+.about-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon i {
+  color: #fff;
+  background-color: #116530;
+  font-size: 40px;
+  width: 65px;
+  height: 65px;
+  border-radius: 100px;
+  padding-top: 10px;
+}
+.mybtn {
+  width: 150px;
+  height: 50px;
+  columns: #116530;
+  border: 2px solid #116530;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+}
+.mybtn:hover {
+  background-color: #116530;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+.appbtn {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  border: 2px solid #116530;
+  background-color: #116530;
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+}
+
+.about-card:hover {
+  background-color: #116530;
+  transition: transform 0.5s backgroun 0.5s;
+}
+.about-card .icon i:hover {
+  background-color: #fff;
+  color: #116530;
+}
+.about-card .card-body:hover {
+  color: #fff;
+}
+
+/* CSS For Products */
+
+.products {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../img/mypro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  background-attachment: fixed;
+  height: 45vh;
+  color: #fff;
+}
+
+/* CSS For Services 2 */
+.services2 {
+  background-color: ghostwhite;
+}
+
+/* CSS for Services */
+
+.services {
+  margin-top: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../img/coins-1726618_1920.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  background-attachment: fixed;
+}
+.services-container {
+  padding-bottom: 50px;
+}
+.service-row i {
+  font-size: 50px;
+  color: #116530;
+}
+.services-btn {
+  display: flex;
+  justify-content: center;
+}
+.serbtn {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  border: 2px solid #116530;
+  background-color: #116530;
+  font-size: 1.3rem;
+}
+.serbtn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+ul li a {
+  color: #116530;
+  list-style-type: square;
+  text-decoration: none;
+}
+
+.try {
+  text-align: left;
+}
+
+.fa-check {
+  color: #116530;
+}
+
+/* CSS for Counter */
+
+.counter-section {
+  padding: 50px;
+  margin-top: 30px;
+}
+.my-icon i {
+  font-size: 45px;
+  color: #116530;
+}
+
+.counter {
+  color: #116530;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.plus-tag {
+  font-size: 30px;
+  font-weight: 600;
+  color: #116530;
+}
+
+/* CSS for Apply-For-Loan */
+
+.aboutsectionone .card {
+  font-family: "Lato", sans-serif;
+}
+
+.myabt .card {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+}
+
+.apply-loan {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/moneycoins.jpg);
+  background-attachment: fixed;
+  height: 35vh;
+  font-family: "Lato", sans-serif;
+}
+.apply-text {
+  font-size: 3rem;
+}
+
+/* CSS for About us Page */
+
+.about-management {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/people-1979261_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+  font-family: "Lato", sans-serif;
+}
+.about-management-text {
+  line-height: 50px;
+}
+.about-management-text h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.my-text {
+}
+.profile {
+  margin-bottom: 70px;
+}
+
+/* Personal Loan */
+.services_page {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/prod.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+/* CSS for Contact us page */
+
+.contact-management {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/woman-2773007_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+  font-family: "Lato", sans-serif;
+}
+.contact-management-text {
+  line-height: 50px;
+}
+.contact-management-text h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* CSS for Individual Loan */
+
+.individual-management {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/coins-948603_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+  font-family: "Lato", sans-serif;
+}
+.individual-management-text {
+  line-height: 50px;
+}
+.individual-management-text h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* CSS for FAQ */
+
+.faq-management {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/coins-1726618_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+}
+.faq-management-text {
+  line-height: 50px;
+}
+.faq-management-text h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* CSS for Consultation */
+
+.consultaion {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../img/coins-1726618_1920.jpg);
+}
+.consult-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+.mail-icon i {
+  font-size: 40px;
+}
+.consultation-btn {
+  display: flex;
+  justify-content: center;
+}
+.consultbtn {
+  width: 170px;
+  height: 38px;
+  color: #fff;
+  border: 2px solid #116530;
+  border-radius: 100px;
+  background-color: #116530;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.consultbtn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* CSS for Ownership*/
+.ownership h1 {
+  font-weight: bold;
+}
+
+/* CSS for Footer */
+
+.footerbg {
+  background-color: #222222;
+}
+.mc-icon {
+  display: flex;
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+.mc-icon i {
+  color: #fff;
+  background-color: #116530;
+  font-size: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  padding-top: 5px;
+  padding-left: 8px;
+}
+
+.footbtn {
+  width: 170px;
+  height: 45px;
+  color: #fff;
+  border: 2px solid #116530;
+  background-color: #116530;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+.footbtn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+/*CSS for Divider */
+
+.divider {
+  width: 75px;
+  margin: auto;
+  border: 2px solid #116530;
+  margin-bottom: 40px;
+}
+
+/* CSS for Google map */
+.google-map {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*CSS for Form */
+
+/* CSS for Accordion */
+
+.accordion-header .accordion-button {
+  color: #fff;
+}
+.accordion-button {
+  background-color: #116530;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #116530;
+  color: #fff;
+}
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0%) invert(100%);
+}
+
+.card-link {
+  color: #2c272e;
+  text-decoration: none;
+}
+.card:hover {
+  color: #116530;
+}
+.active {
+  color: #fff !important;
+  font-weight: bold;
+  background-color: #116530;
+}
+.active:hover {
+  color: #fff !important;
+}
+.active2 {
+  color: #116530 !important;
+  font-weight: bold;
+}
+.terms {
+  padding-bottom: 10px;
+  text-align: justify;
+}
+.about-textman h5 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+/* CSS For Menu Hover Dropdown */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-item:hover {
+  color: #116530 !important;
+  font-weight: bold;
+}
+
+/* Media Queries  */
+
+/* On screens that are 500px or less */
+
+@media screen and (max-width: 500px) {
+  /*
+    #carouselExampleDark{
+        display:none !important;
+    }
+    */
+
+  .carousel-item {
+    height: 20vh;
+  }
+  .carousel-caption {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    );
+    bottom: 50px;
+    height: 100px;
+  }
+  .carousel-caption h5 {
+    font-size: 0.6rem;
+    color: #fff;
+    line-height: 17px;
+  }
+  .carousel-caption .btn {
+    width: 100px;
+    height: 30px;
+    font-size: 0.7rem;
+    border-radius: 45px;
+  }
+  .about {
+    margin-bottom: 20px;
+  }
+  .services-btn {
+    padding-top: 30px;
+  }
+
+  .carobtn {
+    display: none;
+  }
+  .ccount-me {
+    padding-bottom: 40px;
+  }
+  .about-sec {
+    margin-bottom: 40px;
+  }
+
+  .about-sec p {
+    text-align: justify;
+  }
+  .mc {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .consult-text h3 {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+  .mail-icon {
+    display: none;
+  }
+  .apply-text h1 {
+    line-height: 40px;
+  }
+  .my-mc {
+    font-size: 1.1rem;
+  }
+  .form-section {
+    margin-top: 40px;
+  }
+  .about-sec {
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+  .faq-management-text h1 {
+    font-size: 2.5rem;
+  }
+  .nav-link {
+    font-size: 1rem;
+    color: #000 !important;
+  }
+  .about-management-text h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding-top: 10px;
+  }
+  .about-management {
+    padding: 40px;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../img/people-1979261_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 35vh;
+  }
+  .small-text {
+    display: none;
+  }
+
+  .faq-management {
+    padding: 40px;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../img/coins-1726618_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 35vh;
+  }
+  .faq-management-text h1 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .faq-small {
+    display: none;
+  }
+  .contact-management {
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../img/woman-2773007_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 35vh;
+  }
+  .contact-small {
+    display: none;
+  }
+  .contact-management-text h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding-top: 20px;
+  }
+  .loan_individual h5 {
+    font-size: 20px;
+  }
+}
+
+.al-regular-input {
+  height: auto;
+}
