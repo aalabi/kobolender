@@ -31,6 +31,7 @@ foreach (Functions::banksCollection() as $bankInfo)
 
 $responseOperation = "";
 $Tag = new MyTag($PDO);
+$emailValue = "";
 if ($theResponse = Tag::getResponse()) {
     $responseMessage = rtrim(implode(", ", $theResponse['messages']), ", ");
     $responseOperation = $Tag->responseTag(
@@ -41,8 +42,11 @@ if ($theResponse = Tag::getResponse()) {
 
     //check for errors messages
     if ($theResponse['status'] == Tag::RESPONSE_NEGATIVE) {
-        $emailValue = $_SESSION['emailValue'];
+        $emailValue = " value='{$_SESSION['emailValue']}'";
         unset($_SESSION['emailValue']);
+
+        $companyNameValue = $_SESSION['companyNameValue'];
+        unset($_SESSION['companyNameValue']);
     }
 }
 ?>
@@ -104,7 +108,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label">Email *</label>
                             <div class="col-md-8">
-                                <input required type="email" name="email" id="" class="form-control">
+                                <input required <?= $emailValue ?> type="email" name="email" id="" class="form-control">
                             </div>
                         </div>
                         <!-- 

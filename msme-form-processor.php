@@ -17,7 +17,7 @@ if (
     $surname = "";
     $firstname = "";
     $middlename = "";
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
+    $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
     $phone = "";
     $dob = "NOW()";
     $idCardType = "";
@@ -192,6 +192,7 @@ if (
     if ($errors) {
         //put value in session variable
         $_SESSION['emailValue'] = $_POST['email'];
+        $_SESSION['companyNameValue'] = $_POST['company_name'];
 
         Tag::setResponse(
             'Invalid Data Input',
