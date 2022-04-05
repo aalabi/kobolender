@@ -32,6 +32,24 @@ foreach (Functions::banksCollection() as $bankInfo)
 $responseOperation = "";
 $Tag = new MyTag($PDO);
 $emailValue = "";
+$companyNameValue = "";
+$companyTinValue = "";
+$companyAddressValue ="";
+$natureOfBusinessValue="";
+$companyPhoneValue ="";
+$accountNoValue="";
+$lendingInstituteValue="";
+$amountCurrentlyOwnValue="";
+$totalMonthPaymentValue="";
+$directDebitValue="";
+$loanPurposeValue="";
+$repaymentPeriodValue="";
+$loanAmountValue="";
+$dueObligationValue="";
+$sourceOfRepaymentValue="";
+$promoterNameValue="";
+$bvnNinNoValue="";
+$collateralValue="";
 if ($theResponse = Tag::getResponse()) {
     $responseMessage = rtrim(implode(", ", $theResponse['messages']), ", ");
     $responseOperation = $Tag->responseTag(
@@ -47,6 +65,57 @@ if ($theResponse = Tag::getResponse()) {
 
         $companyNameValue = $_SESSION['companyNameValue'];
         unset($_SESSION['companyNameValue']);
+
+        $companyTinValue = $_SESSION['companyTinValue'];
+        unset($_SESSION['companyTinValue']);
+
+        $companyAddressValue = $_SESSION['companyAddressValue'];
+        unset($_SESSION['companyAddressValue']);
+
+        $natureOfBusinessValue = $_SESSION['natureOfBusinessValue'];
+        unset($_SESSION['natureOfBusinessValue']);
+
+        $companyPhoneValue = $_SESSION['companyPhoneValue'];
+        unset($_SESSION['companyPhoneValue']);
+
+        $accountNoValue = $_SESSION['accountNoValue'];
+        unset($_SESSION['accountNoValue']);
+
+        $lendingInstituteValue = $_SESSION['lendingInstituteValue'];
+        unset($_SESSION['lendingInstituteValue']);
+
+        $amountCurrentlyOwnValue = $_SESSION['amountCurrentlyOwnValue'];
+        unset($_SESSION['amountCurrentlyOwnValue']);
+
+        $loanPurposeValue = $_SESSION['loanPurposeValue'];
+        unset($_SESSION['loanPurposeValue']);
+
+        $totalMonthPaymentValue = $_SESSION['totalMonthPaymentValue'];
+        unset($_SESSION['totalMonthPaymentValue']);
+
+        $directDebitValue = $_SESSION['directDebitValue'];
+        unset($_SESSION['directDebitValue']);
+
+        $loanAmountValue = $_SESSION['loanAmountValue'];
+        unset($_SESSION['loanAmountValue']);
+
+        $collateralValue = $_SESSION['collateralValue'];
+        unset($_SESSION['collateralValue']);
+
+        $dueObligationValue = $_SESSION['dueObligationValue'];
+        unset($_SESSION['dueObligationValue']);
+
+        $sourceOfRepaymentValue = $_SESSION['sourceOfRepaymentValue'];
+        unset($_SESSION['sourceOfRepaymentValue']);
+
+        $repaymentPeriodValue = $_SESSION['repaymentPeriodValue'];
+        unset($_SESSION['repaymentPeriodValue']);
+
+        $promoterNameValue = $_SESSION['promoterNameValue'];
+        unset($_SESSION['promoterNameValue']);
+
+        $bvnNinNoValue = $_SESSION['bvnNinNoValue'];
+        unset($_SESSION['bvnNinNoValue']);
     }
 }
 ?>
@@ -158,13 +227,13 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label for="company name" class="col-md-4 col-form-label">Business Name *</label>
                             <div class="col-md-8">
-                                <input required type="text" name="company_name" id="" class="form-control">
+                                <input required <?= $companyNameValue ?> type="text" name="company_name" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="company name" class="col-md-4 col-form-label">TIN *</label>
                             <div class="col-md-8">
-                                <input required type="text" name="company_tin" id="" class="form-control">
+                                <input required<?= $companyTinValue ?>  type="text" name="company_tin" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -178,19 +247,19 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Business Address *</label>
                             <div class="col-md-8">
-                                <textarea required name="company_address" id="" cols="30" rows="4" class="form-control" placeholder="Address"></textarea>
+                                <textarea required name="company_address" id="" cols="30" rows="4" class="form-control" placeholder="Address"><?= $companyAddressValue ?> </textarea>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Nature of Business *</label>
                             <div class="col-md-8">
-                                <input required type="text" name="nature_of_business" id="" class="form-control">
+                                <input required <?= $natureOfBusinessValue ?> type="text" name="nature_of_business" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Business Phone Number *</label>
                             <div class="col-md-8">
-                                <input required type="number" name="company_phone" id="" class="form-control">
+                                <input required <?= $companyPhoneValue ?> type="number" name="company_phone" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -230,7 +299,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label for="bank account" class="col-md-4 col-form-label">Account No *</label>
                             <div class="col-md-8">
-                                <input required type="text" name="account_no" id="" class="form-control">
+                                <input required <?= $accountNoValue ?> type="text" name="account_no" id="" class="form-control">
                             </div>
                         </div>
                     </fieldset>
@@ -240,14 +309,14 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-5 col-form-label">Which other Bank(s)/Lending Institution are you borrowing from? </label>
                             <div class="col-md-7">
-                                <input type="text" name="lending_institute" class="form-control">
+                                <input type="text" <?= $lendingInstituteValue ?> name="lending_institute" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="amount" class="col-md-5 col-form-label">What is the total amount you currently owe
                                 from the various sources</label>
                             <div class="col-md-7">
-                                <input type="number" step="0.01" name="amount_currently_own" id="" class="form-control">
+                                <input type="number" <?=$amountCurrentlyOwnValue ?> step="0.01" name="amount_currently_own" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -255,7 +324,7 @@ if ($theResponse = Tag::getResponse()) {
                                 What is the total monthly repayment you make for the existing loans
                             </label>
                             <div class="col-md-7">
-                                <input type="number" step="0.01" name="total_monthly_payment" id="" class="form-control">
+                                <input type="number" <?=$totalMonthPaymentValue ?>step="0.01" name="total_monthly_payment" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -278,7 +347,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-5 col-form-label">Amount Been Paid</label>
                             <div class="col-md-7">
-                                <input type="number" step="0.01" name="directDebit" id="" class="form-control">
+                                <input type="number"<?= $directDebitValue ?> step="0.01" name="directDebit" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -299,7 +368,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3" id="mamaboy">
                             <label class="col-md-5 col-form-label">Amount Due</label>
                             <div class="col-md-7">
-                                <input type="number" step="0.01" name="dueObligation" id="" class="form-control">
+                                <input <?= $dueObligationValue ?> type="number" step="0.01" name="dueObligation" id="" class="form-control">
                             </div>
                         </div>
                     </fieldset>
@@ -309,19 +378,19 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Loan Amount (requested) *</label>
                             <div class="col-md-8">
-                                <input required type="number" step="0.01" name="loan_amount" id="" class="form-control">
+                                <input required <?= $loanAmountValue ?> type="number" step="0.01" name="loan_amount" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Loan Purpose *</label>
                             <div class="col-md-8">
-                                <input required type="text" name="loan_purpose" id="" class="form-control">
+                                <input required <?= $loanPurposeValue ?> type="text" name="loan_purpose" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="collateral" class="col-md-4 col-form-label">Collateral *</label>
                             <div class="col-md-8">
-                                <input required type="text" name="collateral" id="" class="form-control">
+                                <input required <?=$collateralValue ?> type="text" name="collateral" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -335,7 +404,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Repayment Period <small>in months</small> *</label>
                             <div class="col-md-8">
-                                <input required type="number" step="1" name="repayment_period" id="" class="form-control">
+                                <input required <?=$repaymentPeriodValue ?> type="number" step="1" name="repayment_period" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -354,14 +423,14 @@ if ($theResponse = Tag::getResponse()) {
                                 <div class="row mb-3">
                                     <label class="col-md-4 col-form-label">Promoter's Name *</label>
                                     <div class="col-md-8">
-                                        <input required type="text" name="promoter_name" id="" class="form-control">
+                                        <input required <?=$promoterNameValue ?> type="text" name="promoter_name" id="" class="form-control">
                                     </div>
                                 </div>
                                 <input required type='hidden' name='bvn_nin' class='al-regular-input' required value='BVN'>
                                 <div class="row mb-3">
                                     <label class="col-md-4 col-form-label">BVN *</label>
                                     <div class="col-md-8">
-                                        <input required type="text" name="bvn_nin_no" class="form-control">
+                                        <input required <?=$bvnNinNoValue ?> type="text" name="bvn_nin_no" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row mb-3">

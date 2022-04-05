@@ -193,6 +193,23 @@ if (
         //put value in session variable
         $_SESSION['emailValue'] = $_POST['email'];
         $_SESSION['companyNameValue'] = $_POST['company_name'];
+        $_SESSION['companyTinValue'] = $_POST['company_tin'];
+        $_SESSION['companyAddressValue'] = $_POST['company_address'];
+        $_SESSION['natureOfBusinessValue'] = $_POST['nature_of_business'];
+        $_SESSION['companyPhoneValue'] = $_POST['company_phone'];
+        $_SESSION['accountNoValue'] = $_POST['account_no'];
+        $_SESSION['lendingInstituteValue'] = $_POST['lending_institute'];
+        $_SESSION['amountCurrentlyOwnValue'] = $_POST['amount_currently_own'];
+        $_SESSION['totalMonthPaymentValue'] = $_POST['total_monthly_payment'];
+        $_SESSION['directDebitValue'] = $_POST['directDebit'];
+        $_SESSION['loanAmountValue'] = $_POST['loan_amount'];
+        $_SESSION['loanPurposeValue'] = $_POST['loan_purpose'];
+        $_SESSION['collateralValue'] = $_POST['collateral'];
+        $_SESSION['dueObligationValue'] = $_POST['dueObligation'];
+        $_SESSION['repaymentPeriodValue'] = $_POST['repayment_period'];
+        $_SESSION['sourceOfRepaymentValue'] = $_POST['source_of_repayment'];
+        $_SESSION['promoterNameValue'] = $_POST['promoter_name'];
+        $_SESSION['bvnNinNoValue'] = $_POST['bvn_nin_no'];
 
         Tag::setResponse(
             'Invalid Data Input',
