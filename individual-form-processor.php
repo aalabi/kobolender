@@ -17,7 +17,7 @@ if (
     $surname = filter_var(trim($_POST['last_name']), FILTER_SANITIZE_STRING);
     $firstname = filter_var(trim($_POST['first_name']), FILTER_SANITIZE_STRING);
     $middlename = filter_var(trim($_POST['middle_name']), FILTER_SANITIZE_STRING);
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
+    $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
     $phone = filter_var(trim($_POST['phone']), FILTER_SANITIZE_STRING);
     $dob = filter_var(trim($_POST['dob']), FILTER_SANITIZE_STRING);
     $employerName = filter_var(trim($_POST['employer_name']), FILTER_SANITIZE_STRING);
