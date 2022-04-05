@@ -17,7 +17,7 @@ if (
     $surname = filter_var(trim($_POST['last_name']), FILTER_SANITIZE_STRING);
     $firstname = filter_var(trim($_POST['first_name']), FILTER_SANITIZE_STRING);
     $middlename = filter_var(trim($_POST['middle_name']), FILTER_SANITIZE_STRING);
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
+    $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
     $phone = filter_var(trim($_POST['phone']), FILTER_SANITIZE_STRING);
     $dob = filter_var(trim($_POST['dob']), FILTER_SANITIZE_STRING);
     $employerName = filter_var(trim($_POST['employer_name']), FILTER_SANITIZE_STRING);
@@ -131,6 +131,34 @@ if (
     //redirect on error
     $responseURL = "Location: " . URL . "individual_form.php";
     if ($errors) {
+
+        $_SESSION['lastNameValue'] = $_POST['last_name'];
+        $_SESSION['firstNameValue'] = $_POST['first_name'];
+        $_SESSION['middleNameValue'] = $_POST['middle_name'];
+        $_SESSION['emailValue'] = $_POST['email'];
+        $_SESSION['phoneValue'] = $_POST['phone'];
+        $_SESSION['dobValue'] = $_POST['dob'];
+        $_SESSION['borrowerAddressValue'] = $_POST['borrower_address'];
+        $_SESSION['employerNameValue'] = $_POST['employer_name'];
+        $_SESSION['employerAddressValue'] = $_POST['employer_address'];
+        $_SESSION['expiryDateValue'] = $_POST['id_expiry_date'];
+        $_SESSION['accountNoValue'] = $_POST['account_no'];
+        $_SESSION['bvnValue'] = $_POST['bvn'];
+        $_SESSION['lendingInstituteValue'] = $_POST['lending_institute'];
+        $_SESSION['amountCurrencyOwnValue'] = $_POST['amount_currently_own'];
+        $_SESSION['totalMonthlyPaymentValue'] = $_POST['total_monthly_payment'];
+        $_SESSION['directPaymentYesValue'] = $_POST['direct_payment_yes'];
+        $_SESSION['paymentObligationYesValue'] = $_POST['payment_obligation_yes'];
+        $_SESSION['loanAmountValue'] = $_POST['loan_amount'];
+        $_SESSION['loanPurposeValue'] = $_POST['loan_purpose'];
+        $_SESSION['repaymentPeriodValue'] = $_POST['repayment_period'];
+        $_SESSION['sourceOfPaymentValue'] = $_POST['source_of_payment'];
+        $_SESSION['guarantorLastNameValue'] = $_POST['guarantor_lastname'];
+        $_SESSION['guarantorFirstNameValue'] = $_POST['guarantor_firstname'];
+        $_SESSION['guarantorMiddleNameValue'] = $_POST['guarantor_middlename'];
+        $_SESSION['guarantorEmailValue'] = $_POST['guarantor_email'];
+        $_SESSION['guarantorPhoneValue'] = $_POST['guarantor_phone'];
+        $_SESSION['guarantorAddressValue'] = $_POST['guarantor_address'];
         Tag::setResponse(
             'Invalid Data Input',
             $errors,

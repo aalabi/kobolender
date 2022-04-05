@@ -233,7 +233,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label for="company name" class="col-md-4 col-form-label">TIN *</label>
                             <div class="col-md-8">
-                                <input required <?= $companyTinValue ?> type="text" name="company_tin" id="" class="form-control">
+                                <input required<?= $companyTinValue ?> type="text" name="company_tin" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -259,7 +259,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Business Phone Number *</label>
                             <div class="col-md-8">
-                                <input required <?= $companyPhoneValue ?> type="number" name="company_phone" id="" class="form-control">
+                                <input required <?= $companyPhoneValue ?> type="text" name="company_phone" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -316,7 +316,12 @@ if ($theResponse = Tag::getResponse()) {
                             <label for="amount" class="col-md-5 col-form-label">What is the total amount you currently owe
                                 from the various sources</label>
                             <div class="col-md-7">
-                                <input type="number" <?= $amountCurrentlyOwnValue ?> step="0.01" name="amount_currently_own" id="" class="form-control">
+                                <<<<<<< HEAD <input type="number" <?= $amountCurrentlyOwnValue ?> step="0.01" name="amount_currently_own" id="" class="form-control">
+                                    ||||||| f3269a0
+                                    <input type="number" <?= $amountCurrentlyOwnValue ?> step="0.01" name="amount_currently_own" id="" class="form-control">
+                                    =======
+                                    <input type="number" <?= $amountCurrentlyOwnValue ?> step="0.01" min="0" name="amount_currently_own" id="" class="form-control">
+                                    >>>>>>> bussyboo
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -324,7 +329,12 @@ if ($theResponse = Tag::getResponse()) {
                                 What is the total monthly repayment you make for the existing loans
                             </label>
                             <div class="col-md-7">
-                                <input type="number" <?= $totalMonthPaymentValue ?>step="0.01" name="total_monthly_payment" id="" class="form-control">
+                                <<<<<<< HEAD <input type="number" <?= $totalMonthPaymentValue ?>step="0.01" name="total_monthly_payment" id="" class="form-control">
+                                    ||||||| f3269a0
+                                    <input type="number" <?= $totalMonthPaymentValue ?>step="0.01" name="total_monthly_payment" id="" class="form-control">
+                                    =======
+                                    <input type="number" <?= $totalMonthPaymentValue ?>step="0.01" min="0" name="total_monthly_payment" id="" class="form-control">
+                                    >>>>>>> bussyboo
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -347,7 +357,12 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-5 col-form-label">Amount Been Paid</label>
                             <div class="col-md-7">
-                                <input type="number" <?= $directDebitValue ?> step="0.01" name="directDebit" id="" class="form-control">
+                                <<<<<<< HEAD <input type="number" <?= $directDebitValue ?> step="0.01" name="directDebit" id="" class="form-control">
+                                    ||||||| f3269a0
+                                    <input type="number" <?= $directDebitValue ?> step="0.01" name="directDebit" id="" class="form-control">
+                                    =======
+                                    <input type="number" <?= $directDebitValue ?> step="0.01" min="0" name="directDebit" id="" class="form-control">
+                                    >>>>>>> bussyboo
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -368,7 +383,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3" id="mamaboy">
                             <label class="col-md-5 col-form-label">Amount Due</label>
                             <div class="col-md-7">
-                                <input <?= $dueObligationValue ?> type="number" step="0.01" name="dueObligation" id="" class="form-control">
+                                <input <?= $dueObligationValue ?> type="number" min="0" step="0.01" name="dueObligation" id="" class="form-control">
                             </div>
                         </div>
                     </fieldset>
@@ -378,7 +393,7 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Loan Amount (requested) *</label>
                             <div class="col-md-8">
-                                <input required <?= $loanAmountValue ?> type="number" step="0.01" name="loan_amount" id="" class="form-control">
+                                <input required <?= $loanAmountValue ?> type="number" min="0" step="0.01" min="0" name="loan_amount" id="" class="form-control">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -404,7 +419,12 @@ if ($theResponse = Tag::getResponse()) {
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">Repayment Period <small>in months</small> *</label>
                             <div class="col-md-8">
-                                <input required <?= $repaymentPeriodValue ?> type="number" step="1" name="repayment_period" id="" class="form-control">
+                                <<<<<<< HEAD <input required <?= $repaymentPeriodValue ?> type="number" step="1" name="repayment_period" id="" class="form-control">
+                                    ||||||| f3269a0
+                                    <input required <?= $repaymentPeriodValue ?> type="number" step="1" name="repayment_period" id="" class="form-control">
+                                    =======
+                                    <input required <?= $repaymentPeriodValue ?> type="number" min="0" step="1" name="repayment_period" id="" class="form-control">
+                                    >>>>>>> bussyboo
                             </div>
                         </div>
                         <div class="row mb-3">
