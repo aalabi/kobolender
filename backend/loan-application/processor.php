@@ -104,7 +104,7 @@ if (
             'staff_profile_id' => ['colValue' => $staffProfileId, 'isFunction' => false, 'isBindAble' => true]
         ];
         $where = [['column' => 'id', 'comparsion' => '=', 'bindAbleValue' => $loanId]];
-        //$Db->update(__LINE__, $column, $where);
+        $Db->update(__LINE__, $column, $where);
 
         //send mail out to inform loan is been worked on
         $loanInfo = $Db->select(__LINE__, [], $where)[0];
