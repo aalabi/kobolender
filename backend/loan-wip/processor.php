@@ -92,7 +92,7 @@ if (
                 <strong>Approval Date</strong>: " . date("jS F Y", strtotime($loanInfo['update_at'])) . "<br/>
             </p>
         ";
-        $Notification->sendMail(['to' => [$email]], "Loan Application Status", $content);
+        $Notification->sendMail(['to' => [$email], 'from' => ['info@' . URLEMAIL]], "APPROVED: Loan Application Status", $content);
 
         $responseTitle = 'Operation Successful';
         $responseMessage = 'A loan has been successfully approved';
@@ -129,6 +129,7 @@ if (
         $Db->update(__LINE__, $column, $where);
 
         //send mail out to show loan has been rejected
+        $loanInfo = $Db->select(__LINE__, [], $where)[0];
         $profileId = $Db->select(__LINE__, ['profile_id'], $where)[0]['profile_id'];
         $profileInfo = $MyUsers->getProfileInfo($profileId);
         $Notification = new Notification();
@@ -138,10 +139,13 @@ if (
             <p style='margin-bottom:8px;'>
                 We are sorry to let you know that your loan application on " . SITENAME . " 
                 was rejected due the reason below<br/>
-                <em>$reason</em>
+                <em>$reason</em><br/>
+                <strong>Loan Product</strong>: " . Functions::getLoanProducts()[$loanId]['market'] . "<br/>
+                <strong>Amount Applied</strong>: " . number_format($loanInfo['amount'], 2) . "<br/>
+                <strong>Application Date</strong>: " . date("jS F Y", strtotime($loanInfo['created_at'])) . "<br/>
             </p>
         ";
-        $Notification->sendMail(['to' => [$email]], "Loan Application Status", $content);
+        $Notification->sendMail(['to' => [$email], 'from' => ['info@' . URLEMAIL]], "REJECTED: Loan Application Status", $content);
 
         $responseTitle = 'Operation Successful';
         $responseMessage = 'A loan has been successfully rejected';
